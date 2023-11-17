@@ -1,15 +1,17 @@
 function Form(){
     return(
         <form>
-            <label for="linkName">Link Name:</label>
+            <label for="linkName">Name:</label>
+            <br />
             <input type="text" id="linkName" name="linkName" value="" />
             <br />
             <br />
-            <label for="URL">Link URL:</label>
+            <label for="URL">URL:</label>
+            <br />
             <input type="text" id="linkURL" name="linkURL" value=""/>
             <br/>
             <br />
-            <input type="submit" value="Submit"></input>
+            <input id="submit-button" type="submit" value="Submit"></input>
         </form>
     )
 }

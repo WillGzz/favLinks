@@ -3,40 +3,40 @@ function TableHeader(){
     return(
         <thead>
         <tr>
-          <th>Name</th>
-          <th>URL</th>
-          <th>Remove</th>
+          <th id="th-name">Name</th>
+          <th id="th-URL">URL</th>
+          <th id="th-remove">Remove</th>
         </tr>
       </thead>
     )
 }
-
+/*
 const TableBody = (props) => {
-    // boilerplate table body functional component
-    // we use Array.map to create table rows from LinkData passed via props
-    const rows = props.linkData.map((row, index) => {
-      return (
-        <tr key={index}>
-          <td>{row.name}</td>
-          <td>
-            <a href={row.URL}>{row.URL}</a>
-          </td>
-          <td>
-            <button onClick={() => props.removeLink(index)}>Delete</button>
-          </td>
-        </tr>
-      )
-    })
-  
-    return <tbody>{rows}</tbody>
-  }
+  // boilerplate table body functional component
+  // we use Array.map to create table rows from LinkData passed via props
+  const rows = props.linkData.map((row, index) => {
+    return (
+      <tr key={index}>
+        <td>{row.name}</td>
+        <td>
+          <a href={row.URL}>{row.URL}</a>
+        </td>
+        <td>
+          <button onClick={() => props.removeLink(index)}>Delete</button>
+        </td>
+      </tr>
+    )
+  })
 
+  return <tbody>{rows}</tbody>
+}
 
+*/
 function Table(){
     return(
         <table>
         <TableHeader/>
-        <TableBody/>
+        {/* <TableBody/> */}
         </table>
     )
 }
