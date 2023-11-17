@@ -10,7 +10,7 @@ function TableHeader(){
       </thead>
     )
 }
-/*
+
 const TableBody = (props) => {
   // boilerplate table body functional component
   // we use Array.map to create table rows from LinkData passed via props
@@ -31,12 +31,12 @@ const TableBody = (props) => {
   return <tbody>{rows}</tbody>
 }
 
-*/
+
 function Table(){
     return(
         <table>
         <TableHeader/>
-        {/* <TableBody/> */}
+         <TableBody/>
         </table>
     )
 }

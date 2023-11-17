@@ -1,6 +1,7 @@
 *{
 margin-left: 20px;
-  
+ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+ 
 }
 
 #submit-button{
@@ -26,3 +27,12 @@ h1, p{
   padding-left: 300px;
 
 }
+thead {
+  border-bottom: 20px solid black; 
+}
+
+input[type="text"] {
+  width: 70%; /* Full width */
+  height: 30px; /* Adjust as needed */
+}
+
