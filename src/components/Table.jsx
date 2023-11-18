@@ -1,44 +1,47 @@
 function TableHeader(){
     /* responsible for rendering the head of our table with the appropriate columns */
     return(
-        <thead>
+        <thead >
         <tr>
           <th id="th-name">Name</th>
           <th id="th-URL">URL</th>
           <th id="th-remove">Remove</th>
+        
         </tr>
+        
       </thead>
+     
     )
 }
 
 const TableBody = (props) => {
-  // boilerplate table body functional component
-  // we use Array.map to create table rows from LinkData passed via props
   const rows = props.linkData.map((row, index) => {
-    return (
-      <tr key={index}>
-        <td>{row.name}</td>
-        <td>
-          <a href={row.URL}>{row.URL}</a>
-        </td>
-        <td>
-          <button onClick={() => props.removeLink(index)}>Delete</button>
-        </td>
-      </tr>
-    )
+      return (
+          <tr key={index}>
+              <td id="row-name">{row.name}</td>
+              
+              <td id="row-URL"> 
+                  <a href={row.URL}>{row.URL}</a>
+              </td>
+              <td>
+                  <button id="delete-button" onClick={() => props.removeLink(index)}>Delete</button>
+              </td>
+          </tr>
+      )
   })
 
   return <tbody>{rows}</tbody>
 }
 
 
-function Table(){
-    return(
-        <table>
-        <TableHeader/>
-         <TableBody/>
-        </table>
-    )
+function Table({ linkData, removeLink }) {
+  return (
+      <table>
+          <TableHeader />
+          <TableBody linkData={linkData} removeLink={removeLink} />
+      </table>
+  )
 }
 
-export default Table
+export default Table;
+

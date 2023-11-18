@@ -1,32 +1,32 @@
-import { useState } from "react"
+import { useState } from "react";
 
-function Form(){
-    const [name, setName] = useState ('')
-    const [url, setURL] = useState ('')
+function Form({ handleSubmit }) {
+    const [name, setName] = useState("");
+    const [URL, setURL] = useState("");
 
-    return(
-        <form onSubmit={(event) =>{
-            event.preventDefault();
-            
-        }}>
+    const submitForm = (event) => {
+        event.preventDefault();
+        handleSubmit({ name, URL });
+        setName("");
+        setURL("");
+    }
+
+    return (
+        <form onSubmit={submitForm}>
             <label htmlFor="linkName">Name:</label>
             <br />
-            <input type="text" id="linkName" name="linkName" value={name} onChange={(event) =>{
-                setName(event.target.value)
-            }} />
+            <input type="text" id="linkName" name="linkName" value={name} onChange={(event) => setName(event.target.value)} />
             <br />
             <br />
-            <label htmlFor="URL">URL:</label>
+            <label For="URL">URL:</label>
             <br />
-            <input type="text" id="linkURL" name="linkURL" value={url} onChange={(event) =>{
-                setURL(event.target.value)
-            }} />
-            <br/>
+            <input type="text" id="linkURL" name="linkURL" value={URL} onChange={(event) => setURL(event.target.value)} />
             <br />
-            <input id="submit-button" type="submit" value="Submit"></input>
+            <br />
+            <input id="submit-button" type="submit" value="Submit" />
         </form>
     )
 }
 
-export default Form
+export default Form;
 
